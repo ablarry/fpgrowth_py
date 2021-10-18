@@ -18,7 +18,8 @@ def fpgrowth(itemSetList, minSupRatio, minConf):
 
 def fpgrowthFromFile(fname, minSupRatio, minConf):
     itemSetList, frequency = getFromFile(fname)
-    minSup = len(itemSetList) * minSupRatio
+    #minSup = len(itemSetList) * minSupRatio
+    minSup = minSupRatio
     fpTree, headerTable = constructTree(itemSetList, frequency, minSup)
     if(fpTree == None):
         print('No frequent item set')
@@ -51,4 +52,4 @@ if __name__ == "__main__":
         options.inputFile, options.minSup, options.minConf)
 
     print(freqItemSet)
-    print(rules)
+    #print(rules)

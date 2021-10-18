@@ -50,4 +50,9 @@ Run program with dataset and min support and min confidence
 
 ```
 python fpgrowth.py -f tesco2.csv -s 0.5 -c 0.5
+
+```
+```
+python fpgrowth.py -f ../dataset/data3.csv -s 60
+
 ```

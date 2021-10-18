@@ -113,6 +113,7 @@ def mineTree(headerTable, minSup, preFix, freqItemList):
     for item in sortedItemList:  
         # Pattern growth is achieved by the concatenation of suffix pattern with frequent patterns generated from conditional FP-tree
         newFreqSet = preFix.copy()
+        headerTable[item]
         newFreqSet.add(item)
         freqItemList.append(newFreqSet)
         # Find all prefix path, constrcut conditional pattern base
