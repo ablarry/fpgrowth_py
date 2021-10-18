@@ -4,3 +4,5 @@ apriori_py.egg-info
 venv
 .idea
 fpgrowth_py.egg-info
+Graph.gv
+Graph.gv.pdf
