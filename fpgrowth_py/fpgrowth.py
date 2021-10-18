@@ -26,7 +26,8 @@ def fpgrowthFromFile(fname, minSupRatio, minConf):
     else:
         freqItems = []
         mineTree(headerTable, minSup, set(), freqItems)
-        rules = associationRule(freqItems, itemSetList, minConf)
+        rules=None
+        #rules = associationRule(freqItems, itemSetList, minConf)
         return freqItems, rules
 
 if __name__ == "__main__":
