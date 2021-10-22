@@ -21,7 +21,11 @@ python fpgrowth.py  -f ../dataset/data3.csv -s 60
 <p align=center>
     <img src="./doc/fp-tree.PNG" width="440" height="331">
 </p>
+
+
 ### Compare with apriory 
+### Example dataset3.csv
+
 <p align=center>
     <img src="./doc/apriory.PNG" width="440" height="331">
 </p>
