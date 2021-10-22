@@ -19,9 +19,13 @@ python fpgrowth.py  -f ../dataset/data3.csv -s 60
 </p>
 
 <p align=center>
-    <img src="./doc/graph.png" width="440" height="331">
+    <img src="./doc/fp-tree.png" width="440" height="331">
 </p>
+#### Compare with apriory
+<p align=center>
+    <img src="./doc/apriory.png" width="440" height="331">
+</p>
+
 ```
 python fpgrowth.py -f ../dataset/data3.csv -s 60
-
 ```
