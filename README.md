@@ -29,6 +29,4 @@ python fpgrowth.py  -f ../dataset/data3.csv -s 60
     <img src="./doc/apriory.PNG" width="440" height="331">
 </p>
 
-```
-python fpgrowth.py -f ../dataset/data3.csv -s 60
-```
+
