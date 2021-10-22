@@ -24,7 +24,6 @@ python fpgrowth.py  -f ../dataset/data3.csv -s 60
 
 
 ### Compare with apriory 
-### Example dataset3.csv
 
 <p align=center>
     <img src="./doc/apriory.PNG" width="440" height="331">
