@@ -4,6 +4,8 @@ from itertools import chain, combinations
 from optparse import OptionParser
 from fpgrowth_py.utils import *
 from graphviz import Graph as Graphviz
+import time
+import matplotlib.pyplot as plt
 
 def fpgrowth(itemSetList, minSupRatio, minConf):
     frequency = getFrequencyFromList(itemSetList)
@@ -67,8 +69,23 @@ if __name__ == "__main__":
 
     (options, args) = optparser.parse_args()
 
-    freqItemSet, rules = fpgrowthFromFile(
-        options.inputFile, options.minSup, options.minConf)
+    #freqItemSet, rules = fpgrowthFromFile(
+    #    options.inputFile, options.minSup, options.minConf)
+    
+    x = []
+    y = []
+    for i in range(int(options.minSup),int(options.minConf),10):
+        start_time = time.time()
+        fpgrowthFromFile(options.inputFile, i, options.minConf)
+        x.append(i)
+        y.append((time.time() - start_time))
 
-    print(freqItemSet)
+    plt.plot(x,y,'k-',marker='o',lw=1.5)
+    plt.xlabel('Support threshold')
+    plt.ylabel('Runtime (sec)')
+    plt.grid(color='black', linestyle='-', linewidth=0.09)
+    plt.title('Time against support threshold')
+    plt.show()
+
+    #print(freqItemSet)
     #print(rules)
